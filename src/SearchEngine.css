@@ -1,0 +1,22 @@
+.SearchEngine form {
+  display: block;
+  margin: 0 auto;
+  max-width:75%;
+}
+.SearchEngine input {
+  border-color: #5D67C1;
+}
+.SearchEngine ::placeholder {
+  color: #5D67C1;
+  opacity: 0.5;
+}
+
+.SearchEngine button{
+  border-color: #5D67C1;
+  color: #5D67C1;
+}
+
+.SearchEngine button:hover{
+background-color: #5D67C1;
+ color: white;
+}

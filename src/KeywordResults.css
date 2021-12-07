@@ -1,0 +1,18 @@
+.KeywordResults .response-container {
+  margin: 30px auto;
+  padding: 2.5rem;
+  background-color: #f7f3ff;
+}
+
+.KeywordResults .text-container {
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+
+.KeywordResults h3 {
+  color: red;
+}
+.KeywordResults .keyword {
+  text-transform: capitalize;
+}

@@ -18,7 +18,6 @@ export default function KeywordResults({ apiRespose }) {
         </div>
       );
     }
-    console.log(apiRespose);
     return (
       <div className="KeywordResults">
         <div className="response-container">

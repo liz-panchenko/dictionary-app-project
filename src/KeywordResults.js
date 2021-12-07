@@ -1,5 +1,6 @@
 import React from "react";
 import "./KeywordResults.css";
+import WordMeaning from "./WordMeaning";
 
 export default function KeywordResults({ apiRespose }) {
   if (apiRespose !== null) {
@@ -9,10 +10,9 @@ export default function KeywordResults({ apiRespose }) {
         <ul>
           {meanings.map(function (meaning, index) {
             return (
-              <li key={index}>
-                <strong>{meaning.partOfSpeech}</strong> <br />{" "}
-                {meaning.definitions[0].definition}
-              </li>
+              <div key={index}>
+                <WordMeaning meaning={meaning} />
+              </div>
             );
           })}
         </ul>

@@ -16,7 +16,7 @@ export default function Footer() {
         </a>
         and is open-sourced on{" "}
         <a
-          href="https://github.com/liz-panchenko/React-Weather-App"
+          href="https://github.com/liz-panchenko/dictionary-app-project"
           target="_blank"
           rel="noreferrer"
         >

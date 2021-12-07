@@ -11,7 +11,12 @@ export default function SearchEngine({ setApiResponse }) {
 
   function makeApiRequest() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputInfo}`;
-    axios.get(apiUrl).then(handleApiResponse);
+    axios
+      .get(apiUrl)
+      .then(handleApiResponse)
+      .catch(function (error) {
+        console.log("I don't know");
+      });
   }
   function handleSearchInput(event) {
     setInputInfo(event.target.value);

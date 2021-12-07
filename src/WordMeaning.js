@@ -10,7 +10,7 @@ export default function WordMeaning({ meaning }) {
           return (
             <li key={index}>
               {definition.definition} <br />{" "}
-              <small className="example">{definition.example}</small>
+              <em className="example">{definition.example}</em>
             </li>
           );
         })}

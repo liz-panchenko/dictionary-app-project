@@ -7,7 +7,7 @@ export default function KeywordResults({ apiRespose }) {
     function displayMeanings() {
       let meanings = apiRespose[0].meanings;
       return (
-        <ul>
+        <div>
           {meanings.map(function (meaning, index) {
             return (
               <div key={index}>
@@ -15,7 +15,7 @@ export default function KeywordResults({ apiRespose }) {
               </div>
             );
           })}
-        </ul>
+        </div>
       );
     }
     console.log(apiRespose);

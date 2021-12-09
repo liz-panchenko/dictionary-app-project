@@ -28,8 +28,12 @@
 
 .KeywordResults .keyword {
   text-transform: capitalize;
+  font-size: 1.75rem;
   padding: 5px;
   padding-right: 7px;
+}
+.KeywordResults .transcription {
+  font-size: 1.2rem;
 }
 .KeywordResults .audio-link {
     color: black;
@@ -38,16 +42,4 @@
 
 .KeywordResults p {
   margin-bottom: 2px;
-}
-
-.KeywordResults .meaning-variant {
-   border: 1px solid #5D67C1;
-   border-radius: 5px;
-}
-
-.KeywordResults ol {
-    list-style-type: none;
-    padding-top: 1rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
 }

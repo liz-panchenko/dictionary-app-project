@@ -2,5 +2,15 @@
   padding-bottom: 0.75rem;
 }
 
+.WordMeaning .meaning-variant {
+   border: 1px solid #5D67C1;
+   border-radius: 5px;
+}
 
+.WordMeaning ol {
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
 

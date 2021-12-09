@@ -35,7 +35,7 @@ export default function SearchEngine({ setApiResponse }) {
             type="search"
             className="form-control"
             autoComplete="off"
-            placeholder="Search for a word"
+            placeholder="Search for a word (e.g. sunset, yoga...)"
             id="search-input"
             onChange={handleSearchInput}
           ></input>

@@ -2,7 +2,7 @@ import React from "react";
 import "./Example.css"
 
 export default function Example(props){
-    if (props.example.length > 1 ){
+    if (props.example){
         return ( <em className="Example">Example: {props.example}</em>)
     } else {
         return null;

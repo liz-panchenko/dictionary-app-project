@@ -1,0 +1,9 @@
+.PhoneticsAudio .audio-button {
+   border: none;
+   background-color: #f7f3ff;
+}
+
+.PhoneticsAudio .audio-link {
+    color: black;
+    opacity: 0.6;
+}

@@ -35,10 +35,7 @@
 .KeywordResults .transcription {
   font-size: 1.2rem;
 }
-.KeywordResults .audio-link {
-    color: black;
-    opacity: 0.6;
-}
+
 
 .KeywordResults p {
   margin-bottom: 2px;

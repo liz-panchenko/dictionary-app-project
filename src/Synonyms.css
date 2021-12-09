@@ -1,0 +1,10 @@
+.Synonyms  .synonyms-header{
+    font-size: smaller;
+    color: black;
+}
+.Synonyms .synonyms-list {
+  font-size: smaller;
+  font-style: italic;
+  color: #5D67C1;
+  font-weight: 300;
+}

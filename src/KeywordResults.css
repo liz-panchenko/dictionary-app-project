@@ -3,6 +3,18 @@
   padding: 2.5rem;
   background-color: #f7f3ff;
 }
+@media screen and (max-width: 767px) {
+    .KeywordResults .response-container {
+      margin: 20px auto;
+      padding-top: 1rem;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      background-color: #f7f3ff;
+    }  
+    .KeywordResults .text-container {
+        max-width: 90% !important;
+    }
+}
 
 .KeywordResults .text-container {
     margin: 0 auto;
@@ -16,7 +28,14 @@
 
 .KeywordResults .keyword {
   text-transform: capitalize;
+  padding: 5px;
+  padding-right: 7px;
 }
+.KeywordResults .audio-link {
+    color: black;
+    opacity: 0.6;
+}
+
 .KeywordResults p {
   margin-bottom: 2px;
 }

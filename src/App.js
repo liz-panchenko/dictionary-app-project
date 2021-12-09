@@ -10,7 +10,7 @@ export default function App() {
     <div className="App">
       <div className="container-fluid">
         <div className="main-container">
-          <h1>Dictionary App</h1>
+          <h1>Dictionary App 📚</h1>
           <SearchEngine setApiResponse={setApiResponse} />
           <KeywordResults apiRespose={apiRespose} />
         </div>

@@ -3,16 +3,22 @@ import "./KeywordResults.css";
 import WordMeaning from "./WordMeaning";
 
 export default function KeywordResults({ apiRespose }) {
+  console.log(apiRespose);
   if (apiRespose !== null) {
     function displayMeanings() {
-      let meanings = apiRespose[0].meanings;
       return (
         <div>
-          {meanings.map(function (meaning, index) {
+          {apiRespose.map(function (apiResposeArray, index) {
             return (
-              <div key={index}>
-                <WordMeaning meaning={meaning} />
-              </div>
+              <ol key={index} className="meaning-variant">
+                {apiResposeArray.meanings.map(function (meaning, index) {
+                  return (
+                    <li key={index}>
+                      <WordMeaning meaning={meaning} />
+                    </li>
+                  );
+                })}
+              </ol>
             );
           })}
         </div>
@@ -27,6 +33,7 @@ export default function KeywordResults({ apiRespose }) {
               {"   "}
               <small> [{apiRespose[0].phonetic}]</small>
             </h3>
+            <p>Definitions:</p>
             {displayMeanings()}
           </div>
         </div>

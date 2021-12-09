@@ -9,10 +9,26 @@
     max-width: 75%;
 }
 
-
 .KeywordResults h3 {
   color: red;
+  padding-bottom: 17px;
 }
+
 .KeywordResults .keyword {
   text-transform: capitalize;
+}
+.KeywordResults p {
+  margin-bottom: 2px;
+}
+
+.KeywordResults .meaning-variant {
+   border: 1px solid #5D67C1;
+   border-radius: 5px;
+}
+
+.KeywordResults ol {
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }

@@ -34,7 +34,7 @@ export default function KeywordResults({
         </div>
       </div>
     );
-  } else {
+  } else if (error === true ){
     return (
       <div className="KeywordResults">
         <div className="response-container">
@@ -45,5 +45,8 @@ export default function KeywordResults({
         </div>
       </div>
     );
+  }
+  else {
+      return <h3>Loading...</h3>;
   }
 }

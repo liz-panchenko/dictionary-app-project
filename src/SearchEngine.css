@@ -2,6 +2,7 @@
   display: block;
   margin: 0 auto;
   max-width:75%;
+  color: #333;
 }
 .SearchEngine input {
   border-color: #5D67C1;

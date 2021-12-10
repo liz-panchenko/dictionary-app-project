@@ -11,7 +11,7 @@ export default function App() {
       <div className="container-fluid">
         <div className="main-container">
           <h1>Dictionary App 📚</h1>
-          <SearchEngine setApiResponse={setApiResponse} />
+          <SearchEngine setApiResponse={setApiResponse} defaultKeyword="dictionary"/>
           <KeywordResults apiRespose={apiRespose} />
         </div>
         <Footer />

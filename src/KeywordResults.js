@@ -4,7 +4,6 @@ import WordMeaning from "./WordMeaning";
 import PhoneticsAudio from "./PhoneticsAudio";
 
 export default function KeywordResults({ apiRespose }) {
-  console.log(apiRespose);
   if (apiRespose !== null) {
     return (
       <div className="KeywordResults">

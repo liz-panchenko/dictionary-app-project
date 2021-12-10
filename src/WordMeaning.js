@@ -3,10 +3,10 @@ import Synonyms from "./Synonyms";
 import Example from "./Example";
 import "./WordMeaning.css";
 
-export default function WordMeaning({ apiRespose }) {
+export default function WordMeaning({ dictionaryApiRespose }) {
   return (
     <div className="WordMeaning">
-      {apiRespose.map(function (apiResposeArray, index) {
+      {dictionaryApiRespose.map(function (apiResposeArray, index) {
         return (
           <ol key={index} className="meaning-variant">
             {apiResposeArray.meanings.map(function (meaning, index) {

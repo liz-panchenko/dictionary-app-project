@@ -1,0 +1,10 @@
+.Pictures img {
+  padding-bottom: 20px;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 767px) {
+    .Pictures img {
+        padding-bottom: 10px;
+    }
+}

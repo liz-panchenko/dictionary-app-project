@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "./SearchEngine.css";
 import axios from "axios";
 
-export default function SearchEngine({ setApiResponse, defaultKeyword }) {
+export default function SearchEngine({
+  setDictionaryApiResponse,
+  setPexelsApiResponse,
+  defaultKeyword,
+}) {
   const [inputInfo, setInputInfo] = useState(defaultKeyword);
   const [loaded, setLoaded] = useState(false);
 
@@ -11,10 +15,16 @@ export default function SearchEngine({ setApiResponse, defaultKeyword }) {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputInfo}`;
     axios
       .get(apiUrl)
-      .then(handleApiResponse)
+      .then(handleDictionaryApiResponse)
       .catch(function (error) {
         console.log("error");
       });
+
+    const pexelsApiKey =
+      "563492ad6f9170000100000145b584295a28432083ca6e518cded181";
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${inputInfo}&per_page=6`;
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsApiResponse);
   }
 
   function handleSearchInput(event) {
@@ -26,8 +36,13 @@ export default function SearchEngine({ setApiResponse, defaultKeyword }) {
     makeApiRequest();
   }
 
-  function handleApiResponse(response) {
-    setApiResponse(response.data);
+  function handleDictionaryApiResponse(response) {
+    setDictionaryApiResponse(response.data);
+  }
+
+  function handlePexelsApiResponse(response) {
+    console.log(response.data);
+    setPexelsApiResponse(response.data.photos);
   }
 
   if (loaded) {

@@ -5,14 +5,22 @@ import SearchEngine from "./SearchEngine";
 import KeywordResults from "./KeywordResults";
 
 export default function App() {
-  const [apiRespose, setApiResponse] = useState(null);
+  const [dictionaryApiRespose, setDictionaryApiResponse] = useState(null);
+  const [pexelsApiResponse, setPexelsApiResponse] = useState(null);
   return (
     <div className="App">
       <div className="container-fluid">
         <div className="main-container">
           <h1>Dictionary App 📚</h1>
-          <SearchEngine setApiResponse={setApiResponse} defaultKeyword="dictionary"/>
-          <KeywordResults apiRespose={apiRespose} />
+          <SearchEngine
+            setDictionaryApiResponse={setDictionaryApiResponse}
+            setPexelsApiResponse={setPexelsApiResponse}
+            defaultKeyword="dictionary"
+          />
+          <KeywordResults
+            dictionaryApiRespose={dictionaryApiRespose}
+            pexelsApiResponse={pexelsApiResponse}
+          />
         </div>
         <Footer />
       </div>

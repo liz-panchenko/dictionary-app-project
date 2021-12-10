@@ -1,6 +1,6 @@
 .KeywordResults .response-container {
   margin: 30px auto;
-  padding: 2.5rem;
+  padding-bottom: 2.5rem;
   background-color: #f7f3ff;
 }
 @media screen and (max-width: 767px) {
@@ -14,6 +14,11 @@
     .KeywordResults .text-container {
         max-width: 90% !important;
     }
+    .KeywordResults h3 {
+      padding-top: 0.75rem !important;
+      text-align:center;
+    }
+
 }
 
 .KeywordResults .text-container {
@@ -22,8 +27,10 @@
 }
 
 .KeywordResults h3 {
+  margin: 0;
   color: red;
-  padding-bottom: 17px;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .KeywordResults .keyword {

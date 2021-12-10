@@ -2,22 +2,29 @@ import React from "react";
 import "./KeywordResults.css";
 import WordMeaning from "./WordMeaning";
 import PhoneticsAudio from "./PhoneticsAudio";
+import Pictures from "./Pictures";
 
-export default function KeywordResults({ apiRespose }) {
-  if (apiRespose !== null) {
+export default function KeywordResults({ dictionaryApiRespose, pexelsApiResponse }) {
+  if (dictionaryApiRespose !== null) {
     return (
       <div className="KeywordResults">
         <div className="response-container">
           <div className="text-container">
             <h3>
-              <span className="keyword">{apiRespose[0].word}</span>
+              <span className="keyword">{dictionaryApiRespose[0].word}</span>
               {"  "}
-              <span className="transcription"> [{apiRespose[0].phonetic}]</span>
+              <span className="transcription">
+                {" "}
+                [{dictionaryApiRespose[0].phonetic}]
+              </span>
               {"  "}
-              <PhoneticsAudio audio={apiRespose[0].phonetics[0].audio} />
+              <PhoneticsAudio
+                audio={dictionaryApiRespose[0].phonetics[0].audio}
+              />
             </h3>
             <p>Definitions:</p>
-            <WordMeaning apiRespose={apiRespose} />
+            <WordMeaning dictionaryApiRespose={dictionaryApiRespose} />
+            <Pictures pexelsApiResponse={pexelsApiResponse} />
           </div>
         </div>
       </div>

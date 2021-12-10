@@ -1,5 +1,7 @@
-.ErrorMessage p{
+.ErrorMessage {
     text-align: center;
+}
+.ErrorMessage p{
     opacity: 0.7;
     padding-bottom: 20px;
 }

@@ -3,6 +3,7 @@ import "./SearchEngine.css";
 import axios from "axios";
 
 export default function SearchEngine({
+  setError,
   setDictionaryApiResponse,
   setPexelsApiResponse,
   defaultKeyword,
@@ -17,7 +18,7 @@ export default function SearchEngine({
       .get(apiUrl)
       .then(handleDictionaryApiResponse)
       .catch(function (error) {
-        console.log("error");
+        setError(true);
       });
 
     const pexelsApiKey =

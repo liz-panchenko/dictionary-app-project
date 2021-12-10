@@ -3,9 +3,14 @@ import "./KeywordResults.css";
 import WordMeaning from "./WordMeaning";
 import PhoneticsAudio from "./PhoneticsAudio";
 import Pictures from "./Pictures";
+import ErrorMessage from "./ErrorMessage";
 
-export default function KeywordResults({ dictionaryApiRespose, pexelsApiResponse }) {
-  if (dictionaryApiRespose !== null) {
+export default function KeywordResults({
+  error,
+  dictionaryApiRespose,
+  pexelsApiResponse,
+}) {
+  if (dictionaryApiRespose !== null && error === false) {
     return (
       <div className="KeywordResults">
         <div className="response-container">
@@ -30,6 +35,15 @@ export default function KeywordResults({ dictionaryApiRespose, pexelsApiResponse
       </div>
     );
   } else {
-    return null;
+    return (
+      <div className="KeywordResults">
+        <div className="response-container">
+          <div className="text-container">
+            <ErrorMessage />
+            <Pictures pexelsApiResponse={pexelsApiResponse} />{" "}
+          </div>
+        </div>
+      </div>
+    );
   }
 }

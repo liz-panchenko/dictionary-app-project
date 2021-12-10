@@ -2,7 +2,6 @@ import React from "react";
 import "./Pictures.css";
 
 export default function Pictures({ pexelsApiResponse }) {
-  console.log(pexelsApiResponse);
   if (pexelsApiResponse) {
     return (
       <div className="Pictures">

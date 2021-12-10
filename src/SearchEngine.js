@@ -41,7 +41,6 @@ export default function SearchEngine({
   }
 
   function handlePexelsApiResponse(response) {
-    console.log(response.data);
     setPexelsApiResponse(response.data.photos);
   }
 

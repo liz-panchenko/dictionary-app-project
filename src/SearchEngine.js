@@ -63,5 +63,6 @@ export default function SearchEngine({ setApiResponse, defaultKeyword }) {
     );
   } else {
     makeApiRequest();
+    return "Loading...";
   }
 }

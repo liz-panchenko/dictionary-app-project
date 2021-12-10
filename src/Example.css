@@ -1,3 +1,8 @@
 .Example {
   font-size: smaller;
 }
+
+.Example .text {
+  font-style: italic;
+  opacity: 0.7;
+}

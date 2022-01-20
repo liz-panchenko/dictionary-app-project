@@ -13,6 +13,7 @@ export default function SearchEngine({
 
   function makeApiRequest() {
     setLoaded(true);
+    setInputInfo("");
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputInfo}`;
     axios
       .get(apiUrl)
@@ -58,6 +59,7 @@ export default function SearchEngine({
               className="form-control"
               autoComplete="off"
               placeholder="Search for a word (e.g. sunset, yoga...)"
+              value={inputInfo}
               onChange={handleSearchInput}
             ></input>
             <button type="submit" className="btn btn-outline-secondary">
